@@ -1,0 +1,14 @@
+---
+- name: Create adminer folder
+  file: 
+    path: "{{ nginx_folder }}"
+    recurse: yes
+    state: directory
+
+- name: Get the file
+  get_url:
+    url: http://www.adminer.org/latest.php
+    dest: "{{ nginx_folder }}/adminer.php"
+    owner: "{{ nginx_user }}"
+    group: "{{ nginx_user }}"
+    mode: 0775
