@@ -1,2 +1,2 @@
-nginx_folder: /var/www/html
-nginx_user: www-data
+web_folder: /var/www/html
+webserver_user: www-data
